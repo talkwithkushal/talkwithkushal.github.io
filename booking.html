@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Book Session</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{font-family:Arial;background:#f4f6f9;text-align:center;padding:40px;}
+.box{background:white;padding:30px;max-width:600px;margin:auto;border-radius:10px;box-shadow:0 8px 20px rgba(0,0,0,0.1);}
+button{padding:12px 25px;border:none;border-radius:25px;background:#4facfe;color:white;font-weight:bold;cursor:pointer;margin-top:15px;}
+select{padding:10px;width:80%;margin:10px 0;}
+.small{font-size:13px;color:#666;margin-top:15px;}
+</style>
+
+</head>
+
+<body>
+
+<div class="box">
+
+<h2>Select Your Session</h2>
+
+<select id="session">
+<option value="499">30 Minute Session – ₹499</option>
+<option value="999">60 Minute Session – ₹999</option>
+</select>
+
+<p class="small">
+By proceeding you confirm that you are 18+ and agree to our payment policy.
+</p>
+
+<button onclick="payNow()">Proceed to Payment</button>
+
+</div>
+
+<script>
+function payNow(){
+
+var session = document.getElementById("session").value;
+
+if(session=="499"){
+window.location.href="https://rzp.io/l/YOUR_499_LINK";
+}
+else{
+window.location.href="https://rzp.io/l/YOUR_999_LINK";
+}
+
+}
+</script>
+
+</body>
+</html>
